@@ -28,12 +28,8 @@ class Program
         // Формирование нового массива из строк, длина которых <= 3 символам
         string[] resultArray = FilterArray(inputArray);
 
-        // Вывод результата
-        Console.WriteLine("Результат:");
-        foreach (string str in resultArray)
-        {
-            Console.WriteLine(str);
-        }
+        // Вывод результата в одну строку
+        Console.WriteLine("[" + string.Join(", ", resultArray) + "]");
     }
 
     static string[] ReadInputArray()
