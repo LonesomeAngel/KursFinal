@@ -1,0 +1,15 @@
+C:\Geek Brains Programming\Kursovaya\obj\Debug\net6.0\Kursovaya.csproj.AssemblyReference.cache
+C:\Geek Brains Programming\Kursovaya\obj\Debug\net6.0\Kursovaya.GeneratedMSBuildEditorConfig.editorconfig
+C:\Geek Brains Programming\Kursovaya\obj\Debug\net6.0\Kursovaya.AssemblyInfoInputs.cache
+C:\Geek Brains Programming\Kursovaya\obj\Debug\net6.0\Kursovaya.AssemblyInfo.cs
+C:\Geek Brains Programming\Kursovaya\obj\Debug\net6.0\Kursovaya.csproj.CoreCompileInputs.cache
+C:\Geek Brains Programming\Kursovaya\bin\Debug\net6.0\Kursovaya.exe
+C:\Geek Brains Programming\Kursovaya\bin\Debug\net6.0\Kursovaya.deps.json
+C:\Geek Brains Programming\Kursovaya\bin\Debug\net6.0\Kursovaya.runtimeconfig.json
+C:\Geek Brains Programming\Kursovaya\bin\Debug\net6.0\Kursovaya.dll
+C:\Geek Brains Programming\Kursovaya\bin\Debug\net6.0\Kursovaya.pdb
+C:\Geek Brains Programming\Kursovaya\obj\Debug\net6.0\Kursovaya.dll
+C:\Geek Brains Programming\Kursovaya\obj\Debug\net6.0\refint\Kursovaya.dll
+C:\Geek Brains Programming\Kursovaya\obj\Debug\net6.0\Kursovaya.pdb
+C:\Geek Brains Programming\Kursovaya\obj\Debug\net6.0\Kursovaya.genruntimeconfig.cache
+C:\Geek Brains Programming\Kursovaya\obj\Debug\net6.0\ref\Kursovaya.dll
