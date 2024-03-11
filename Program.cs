@@ -5,48 +5,79 @@
 // При решении не рекомендуется пользоваться коллекциями, 
 // лучше обойтись исключительно массивами.
 
+using System;
+
 class Program
 {
     static void Main(string[] args)
     {
-        // Ввод массива строк с клавиатуры
-        Console.WriteLine("Введите элементы массива (разделяйте каждый элемент нажатием клавиши Enter). Для завершения введите пустую строку:");
-        string[] inputArray = ReadInputArray();
+        string[] inputArray;
+
+        // Если аргументы командной строки отсутствуют или их количество недостаточно для формирования массива, запрашиваем ввод с клавиатуры
+        if (args.Length < 1)
+        {
+            // Вводим массив с клавиатуры
+            Console.WriteLine("Введите строки для массива (введите пустую строку для завершения ввода):");
+            inputArray = ReadInputArray();
+        }
+        else
+        {
+            inputArray = args;
+        }
 
         // Формирование нового массива из строк, длина которых <= 3 символам
-        string[] resultArray = FilterShortStrings(inputArray);
+        string[] resultArray = FilterArray(inputArray);
 
         // Вывод результата
-        Console.WriteLine("\nРезультат:");
+        Console.WriteLine("Результат:");
         foreach (string str in resultArray)
         {
             Console.WriteLine(str);
         }
     }
 
-    // Метод для ввода массива строк с клавиатуры
     static string[] ReadInputArray()
     {
-        var inputList = new System.Collections.Generic.List<string>();
-        string input;
-        while (!string.IsNullOrWhiteSpace(input = Console.ReadLine()))
+        // Временный список для хранения введенных строк
+        string[] tempArray = new string[100]; // Максимальное количество строк - 100
+        int count = 0;
+
+        // Чтение строк с клавиатуры
+        while (true)
         {
-            inputList.Add(input);
+            string input = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(input)) // Проверка на пустую строку для завершения ввода
+                break;
+
+            tempArray[count++] = input;
         }
-        return inputList.ToArray();
+
+        // Создание массива с длиной, соответствующей количеству введенных строк
+        string[] inputArray = new string[count];
+        Array.Copy(tempArray, inputArray, count);
+
+        return inputArray;
     }
 
-    // Метод для формирования нового массива из строк, длина которых <= 3 символам
-    static string[] FilterShortStrings(string[] inputArray)
+    static string[] FilterArray(string[] inputArray)
     {
-        var resultList = new System.Collections.Generic.List<string>();
+        // Подсчёт количества строк, удовлетворяющих условию
+        int resultCount = 0;
         foreach (string str in inputArray)
         {
             if (str.Length <= 3)
-            {
-                resultList.Add(str);
-            }
+                resultCount++;
         }
-        return resultList.ToArray();
+
+        // Создание массива с подходящими строками
+        string[] resultArray = new string[resultCount];
+        int index = 0;
+        foreach (string str in inputArray)
+        {
+            if (str.Length <= 3)
+                resultArray[index++] = str;
+        }
+
+        return resultArray;
     }
 }
